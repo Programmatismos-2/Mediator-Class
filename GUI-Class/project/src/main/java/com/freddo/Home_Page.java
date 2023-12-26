@@ -9,7 +9,9 @@ import java.awt.image.BufferedImage;
 import java.net.URL;
 
 public class Home_Page extends JFrame {
-    static ImageIcon logo = new ImageIcon("Sky Logo.png");    //Αυτο το path θα πρεπει να αλλάξει ώστε η εικόνα να βρίσκεται στον κοινό φάκελο με το project
+    final ImageIcon logo = new ImageIcon(getClass().getClassLoader().getResource("resources/chatbot1.png"));    //Αυτο το path θα πρεπει να αλλάξει ώστε η εικόνα να βρίσκεται στον κοινό φάκελο με το project
+    //final BufferedImage myLogo = ImageIO.read(getClass().getResource("../resources/chatbot1.png"));
+    //getClass().getClassLoader().getResource("resources/images/logo.png")
 
     public Home_Page() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);      //Κλεινει το παραθυρο οταν καποιος παταει το x
@@ -17,7 +19,7 @@ public class Home_Page extends JFrame {
         setLayout(null);      //Προσδιορίζει το είδος του layout που εχει το frame
         
         setIconImage(logo.getImage());    //Θέτει την εικονα με το παραπανω path σαν logo του παραθύρου
-        ImageIcon homePic = new ImageIcon("src\\resources\\HomePlane1.jpg");    //Αυτο το path θα πρεπει να αλλάξει ώστε η εικόνα να βρίσκεται στον κοινό φάκελο με το project
+        final ImageIcon homePic = new ImageIcon(getClass().getClassLoader().getResource("resources/HomePlane.jpeg"));    //Αυτο το path θα πρεπει να αλλάξει ώστε η εικόνα να βρίσκεται στον κοινό φάκελο με το project
         JLabel lab1 = new JLabel(homePic);       //Εισάγω την φωτογραφία background σαν JLabel
         lab1.setSize(800, 530);     //Ορίζω το μέγεθος του label ίδιο με του frame
         add(lab1);    //Προσθέτω το label στο frame
